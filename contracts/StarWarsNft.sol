@@ -10,7 +10,7 @@ contract StarWarsNft is ERC721, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("StarWars NFT", "SW") {}
+    constructor() ERC721("Star Wars NFT", "SW") {}
 
     function mintNFT(address recipient) public onlyOwner returns (uint256) {
         _tokenIds.increment();
@@ -23,6 +23,6 @@ contract StarWarsNft is ERC721, Ownable {
 
     /// @dev Changes baseURI to ipfs directory with tokens properties
     function _baseURI() internal view virtual override returns (string memory) {
-        return "ipfs//linkToMyBase";
+        return "https://gateway.pinata.cloud/ipfs/QmWimriCiyQy6kNmLswiPd7odjDmB5EsAeyCTqhsE7dpmd/";
     }
 }
