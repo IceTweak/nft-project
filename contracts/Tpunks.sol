@@ -7,12 +7,12 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title ERC721 Token implementation
-contract StarWarsNft is ERC721, Ownable {
+contract Tpunks is ERC721, Ownable {
     using Counters for Counters.Counter;
     using Strings for uint256;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("Marvel Star Wars", "MSW") {}
+    constructor() ERC721("Punks Not Dead", "PNKS") {}
 
     function mintNFT(address recipient) public onlyOwner returns (uint256) {
         _tokenIds.increment();
@@ -28,11 +28,11 @@ contract StarWarsNft is ERC721, Ownable {
         _requireMinted(tokenId);
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json")) : "";
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
     }
 
     /// @dev Returns baseURI to ipfs directory with tokens properties
     function _baseURI() internal view virtual override returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/QmbtHKYt6HfDnneEwBwWPxzip37ULNb5qop9gAdxySwZZr/";
+        return "https://gateway.pinata.cloud/ipfs/QmVstjSpWtj8p3nYUMdKvc8AvjNL8Xj2kwhnBZt4YmYaJm/";
     }
 }
