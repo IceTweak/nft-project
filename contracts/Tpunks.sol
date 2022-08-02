@@ -33,6 +33,6 @@ contract Tpunks is ERC721, Ownable {
 
     /// @dev Returns baseURI to ipfs directory with tokens properties
     function _baseURI() internal view virtual override returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/QmVstjSpWtj8p3nYUMdKvc8AvjNL8Xj2kwhnBZt4YmYaJm/";
+        return "https://gateway.pinata.cloud/ipfs/QmTdakPgFxcULqLmovxRJtuYbvFvjXpbtRysbwnWqyejr4/";
     }
 }
