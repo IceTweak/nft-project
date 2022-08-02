@@ -5,7 +5,6 @@ const jsonDirPath = path.join(process.cwd(), "output", "properties");
 
 function setImgLink(dirPath, link) {
   const jsonsInDir = fs.readdirSync(dirPath);
-  //.filter(file => path.extname(file) === ".json");
 
   jsonsInDir.forEach((file) => {
     const fullPath = path.join(dirPath, file);
@@ -40,5 +39,5 @@ function jsonReader(filePath, cb) {
 
 setImgLink(
   jsonDirPath,
-  "https://gateway.pinata.cloud/ipfs/QmSPJuQmArRo8awYmM3ikfRkyGpw3kZpAYWqcDfgYLphDS",
+  "https://gateway.pinata.cloud/ipfs/QmUZjyFc4hGVmmgJ7m3fubWnenDCAQoRTZUg1zvZU8yK2p",
 );

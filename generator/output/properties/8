@@ -1,0 +1,24 @@
+{
+  "image": "https://gateway.pinata.cloud/ipfs/QmUZjyFc4hGVmmgJ7m3fubWnenDCAQoRTZUg1zvZU8yK2p/8.png",
+  "name": "Tommorow's Punk #8",
+  "external_url": "https://github.com/IceTweak",
+  "description": "Punks Not Dead",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mid"
+    },
+    {
+      "trait_type": "Shirt",
+      "value": "Purple Blue Pink"
+    },
+    {
+      "trait_type": "Facial Hair",
+      "value": "Long Beard"
+    }
+  ]
+}

@@ -119,4 +119,4 @@ function generateMetadata(content, tokenId, traits) {
   return content.metadataTemplate(tokenId, attributes);
 }
 
-generateNFT(50, layersPath, outputPath);
+generateNFT(45, layersPath, outputPath);

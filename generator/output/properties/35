@@ -1,0 +1,28 @@
+{
+  "image": "https://gateway.pinata.cloud/ipfs/QmUZjyFc4hGVmmgJ7m3fubWnenDCAQoRTZUg1zvZU8yK2p/35.png",
+  "name": "Tommorow's Punk #35",
+  "external_url": "https://github.com/IceTweak",
+  "description": "Punks Not Dead",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Wheat"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Mid"
+    },
+    {
+      "trait_type": "Shirt",
+      "value": "Pinata"
+    },
+    {
+      "trait_type": "Top",
+      "value": "Cap"
+    },
+    {
+      "trait_type": "Facial Hair",
+      "value": "Mutton Chops"
+    }
+  ]
+}
