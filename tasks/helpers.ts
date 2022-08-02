@@ -1,10 +1,13 @@
-import { Provider } from "@ethersproject/providers";
+import { BaseProvider, Provider } from "@ethersproject/providers";
 import { getContractAt } from "@nomiclabs/hardhat-ethers/internal/helpers";
-import { ethers } from "ethers";
+import { Contract, ethers, Wallet } from "ethers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 /**  Helper method for fetching environment variables from .env */
-export function getEnvVariable(key: string, defaultValue?: string) {
+export function getEnvVariable(
+  key: string,
+  defaultValue?: string,
+): string | undefined {
   if (process.env[key]) {
     return process.env[key];
   }
@@ -15,7 +18,7 @@ export function getEnvVariable(key: string, defaultValue?: string) {
 }
 
 /**  Helper method for fetching a connection provider to the Ethereum network */
-export function getProvider() {
+export function getProvider(): BaseProvider {
   return ethers.getDefaultProvider(getEnvVariable("NETWORK", "rinkeby"), {
     alchemy: getEnvVariable("ALCHEMY_KEY"),
   });
@@ -24,16 +27,16 @@ export function getProvider() {
 /**  Helper method for fetching a wallet account
  * using an environment variable for the PK
  */
-export function getAccount() {
+export function getAccount(): Wallet | undefined {
   const account = getEnvVariable("PRIVATE_KEY");
   if (account) return new ethers.Wallet(account, getProvider() as Provider);
 }
 
 /**  Helper method for fetching a contract instance at a given address */
-export function getContract(
+export async function getContract(
   contractName: string,
   hre: HardhatRuntimeEnvironment,
-) {
+): Promise<Contract | undefined> {
   const account = getAccount();
   const contractAddr = getEnvVariable("NFT_CONTRACT_ADDRESS");
   if (contractAddr)

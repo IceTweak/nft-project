@@ -6,7 +6,7 @@ task("mint", "Mints from the NFT contract")
   .setAction(async function (taskArguments, hre) {
     const contract = await getContract("Tpunks", hre);
     if (contract) {
-      for (let i = 1; i <= 50; i++) {
+      for (let i = 1; i <= 45; i++) {
         const transactionResponse = await contract.mintNFT(
           taskArguments.address,
           {
