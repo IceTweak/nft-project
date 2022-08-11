@@ -2,6 +2,7 @@ import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import dotenv from "dotenv";
+import "hardhat-deploy";
 import "hardhat-gas-reporter";
 import "hardhat-packager";
 import { HardhatUserConfig } from "hardhat/config";
@@ -13,10 +14,12 @@ dotenv.config();
 const {
   COIN_MARKET_CAP_API_KEY = "d25b5576-a4ee-41be-bb2b-aca2ba3ae5d8",
   ETHERSCAN_API_KEY,
+  ALCHEMY_KEY,
+  PRIVATE_KEY,
   INFURA_PROJECT_ID = "84842078b09946638c03157f83405213",
   MNEMONIC = "overn merry manual oil detail fit pair boat possible pitch icon donkey",
   REPORT_GAS = "false",
-  SOLIDITY_VERSION = "0.8.11",
+  SOLIDITY_VERSION = "0.8.15",
 } = process.env;
 
 if (!MNEMONIC) {
@@ -70,9 +73,9 @@ const config: HardhatUserConfig = {
       accounts,
     },
     rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${INFURA_PROJECT_ID}`,
+      url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_KEY}`,
       chainId: 4,
-      accounts,
+      accounts: [`0x${PRIVATE_KEY}`],
     },
     goerli: {
       url: `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`,
@@ -141,6 +144,9 @@ const config: HardhatUserConfig = {
   packager: {
     contracts: ["Greeter"],
     includeFactories: true,
+  },
+  namedAccounts: {
+    deployer: 0,
   },
 };
 

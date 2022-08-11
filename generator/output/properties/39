@@ -1,0 +1,24 @@
+{
+  "image": "https://gateway.pinata.cloud/ipfs/QmUZjyFc4hGVmmgJ7m3fubWnenDCAQoRTZUg1zvZU8yK2p/39.png",
+  "name": "Tommorow's Punk #39",
+  "external_url": "https://github.com/IceTweak",
+  "description": "Punks Not Dead",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Orange"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Light"
+    },
+    {
+      "trait_type": "Shirt",
+      "value": "Flames"
+    },
+    {
+      "trait_type": "Facial Hair",
+      "value": "Goatee"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "image": "https://gateway.pinata.cloud/ipfs/QmUZjyFc4hGVmmgJ7m3fubWnenDCAQoRTZUg1zvZU8yK2p/25.png",
+  "name": "Tommorow's Punk #25",
+  "external_url": "https://github.com/IceTweak",
+  "description": "Punks Not Dead",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Wheat"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Light"
+    },
+    {
+      "trait_type": "Shirt",
+      "value": "Purple Blue Pink"
+    },
+    {
+      "trait_type": "Top",
+      "value": "Cowboy"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Square Shades"
+    }
+  ]
+}
